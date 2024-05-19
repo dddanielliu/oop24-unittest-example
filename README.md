@@ -35,7 +35,7 @@ $ mkdir build && cd build
 $ cmake .. && make
 ```
 
-以下指令都在 /build 資料夾下執行。
+在這之後的指令都在 /build 資料夾下執行。
 
 ### 4. 執行 ctest 並確認結果
 
@@ -116,10 +116,6 @@ $ cat ./add.cpp.gcov
     -:   10:}
 ```
 
-```sh
-$ gcov ./CMakeFiles/add.dir/add.cpp.gcda 
-```
-
 ### 6. 為了視覺化程式碼覆蓋率，我們可以安裝 LCOV 
 
 Linux:
@@ -130,7 +126,9 @@ $ apt-get install lcov
 
 若環境有需要，請自行加上 `sudo`
 
-Windows
+Windows:
+
+可以透過 Windows Subsystem of Linux 來操作 Linux。
 
 ### 7. 執行 lcov ，產生統計資料
 
