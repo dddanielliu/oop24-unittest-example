@@ -2,7 +2,7 @@
 
 ## 使用方法
 
-0. 請於事前安裝 cmake
+### 0. 請於事前安裝 cmake
 
 Linux:
 
@@ -17,19 +17,19 @@ Windows:
 
 可以透過 Windows Subsystem of Linux 來操作 Linux。
 
-1. clone 這個專案
+### 1. clone 這個專案
 
 ```shell
 $ git clone https://github.com/oopnccucs/exercise-unittest-example
 ```
 
-2. 建立並移動到 build 資料夾
+### 2. 建立並移動到 build 資料夾
 
 ```shell
 $ mkdir build && cd build
 ```
 
-3. 使用 cmake 建立 makefile，並編譯檔案
+### 3. 使用 cmake 建立 makefile，並編譯檔案
 
 ```shell
 $ cmake .. && make
@@ -37,7 +37,7 @@ $ cmake .. && make
 
 以下指令都在 /build 資料夾下執行。
 
-4. 執行 ctest 並確認結果
+### 4. 執行 ctest 並確認結果
 
 ```sh
 $ ctest --output-on-failure
@@ -90,7 +90,7 @@ TEST(Calculator, Add2) {
 }
 ```
 
-5. 執行 GCOV ，查看程式碼覆蓋率
+### 5. 執行 GCOV ，查看程式碼覆蓋率
 
 ```sh
 $ gcov ./CMakeFiles/add.dir/add.cpp.gcda 
@@ -118,8 +118,9 @@ $ cat ./add.cpp.gcov
 
 ```sh
 $ gcov ./CMakeFiles/add.dir/add.cpp.gcda 
+```
 
-6. 為了視覺化程式碼覆蓋率，我們可以安裝 LCOV 
+### 6. 為了視覺化程式碼覆蓋率，我們可以安裝 LCOV 
 
 Linux:
 
@@ -131,20 +132,20 @@ $ apt-get install lcov
 
 Windows
 
-7. 執行 lcov ，產生統計資料
+### 7. 執行 lcov ，產生統計資料
 
 ```sh
 $ lcov -c -d CMakeFiles -o cov.info
 ```
 
-8. 使用內建在 lcov 的 genhtml 產生視覺化資料 (html)
+### 8. 使用內建在 lcov 的 genhtml 產生視覺化資料 (html)
 
 ```sh
 $ genhtml cov.info -o report
 ```
 
-9. 查看 /build/report/index.html ，以瀏覽器開啟這個html檔案
+### 9. 查看 /build/report/index.html ，以瀏覽器開啟這個html檔案
 
-10. 確認程式碼覆蓋率。
+### 10. 確認程式碼覆蓋率。
     
 在這個測試中，點入 `/exercise-unittest-example` 後，可以看到 `app.cpp` 的覆蓋率為50%，查看測試程式後可以發現在減法的部分沒有在測試中。
