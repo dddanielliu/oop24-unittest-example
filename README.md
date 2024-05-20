@@ -90,12 +90,21 @@ TEST(Calculator, Add2) {
 }
 ```
 
-### 5. 執行 GCOV ，查看程式碼覆蓋率
+### 5. 修改程式碼後，再度 make 與 ctest 察看結果
+
+```sh
+make && ctest --output-on-failure
+```
+除非改動到專案構造，否則不需要重新cmake
+
+### 5. 執行 gcov ，查看程式碼覆蓋率
 
 ```sh
 $ gcov ./CMakeFiles/add.dir/add.cpp.gcda 
 $ cat ./add.cpp.gcov
 ```
+gcov格式如下:
+gcov ./CMakeFiles/<檔案名稱>.dir/<檔案路徑>/<檔案名稱(包含副檔名)>.gcda
 
 可以看到如下涵蓋率報表：
 
@@ -116,7 +125,7 @@ $ cat ./add.cpp.gcov
     -:   10:}
 ```
 
-### 6. 為了視覺化程式碼覆蓋率，我們可以安裝 LCOV 
+### 6. 為了視覺化程式碼覆蓋率，我們可以安裝 lcov 
 
 Linux:
 
