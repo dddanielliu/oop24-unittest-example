@@ -20,7 +20,7 @@ Windows:
 ### 1. clone 這個專案
 
 ```shell
-$ git clone https://github.com/oopnccucs/exercise-unittest-example
+$ git clone https://github.com/oopnccucs/oop24-unittest-example
 ```
 
 ### 2. 建立並移動到 build 資料夾
@@ -46,7 +46,7 @@ $ ctest --output-on-failure
 在這次測試中應當會出現以下結果：
 
 ```
-Test project /exercise-unittest-example/build
+Test project /oop24-unittest-example/build
     Start 1: my_project_test
 1/1 Test #1: my_project_test ..................***Failed    0.10 sec
 [==========] Running 2 tests from 1 test suite.
@@ -55,7 +55,7 @@ Test project /exercise-unittest-example/build
 [ RUN      ] Calculator.Add
 [       OK ] Calculator.Add (0 ms)
 [ RUN      ] Calculator.Add2
-/exercise-unittest-example/unittest.cpp:12: Failure
+/oop24-unittest-example/unittest.cpp:12: Failure
 Expected equality of these values:
   C.Add(1, 3)
     Which is: 4
@@ -109,7 +109,7 @@ gcov ./CMakeFiles/<檔案名稱>.dir/<檔案路徑>/<檔案名稱(包含副檔�
 可以看到如下涵蓋率報表：
 
 ```
-    -:    0:Source:/exercise-unittest-example/add.cpp
+    -:    0:Source:/oop24-unittest-example/add.cpp
     -:    0:Graph:./CMakeFiles/add.dir/add.cpp.gcno
     -:    0:Data:./CMakeFiles/add.dir/add.cpp.gcda
     -:    0:Runs:3
@@ -155,6 +155,6 @@ $ genhtml cov.info -o report
 
 ### 11. 確認程式碼覆蓋率。
     
-在這個測試中，點入 `/exercise-unittest-example` 後，可以看到 `app.cpp` 的覆蓋率為50%，查看測試程式後可以發現在減法的部分沒有在測試中。
+在這個測試中，點入 `/oop24-unittest-example` 後，可以看到 `app.cpp` 的覆蓋率為50%，查看測試程式後可以發現在減法的部分沒有在測試中。
 
 ![image](https://i.imgur.com/8fWeBEG.png)
