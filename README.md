@@ -100,7 +100,7 @@ $ cat ./add.cpp.gcov
 可以看到如下涵蓋率報表：
 
 ```
-    -:    0:Source:/mnt/d/program/C/univ/test/googletest-sample/add.cpp
+    -:    0:Source:/exercise-unittest-example/add.cpp
     -:    0:Graph:./CMakeFiles/add.dir/add.cpp.gcno
     -:    0:Data:./CMakeFiles/add.dir/add.cpp.gcda
     -:    0:Runs:3
