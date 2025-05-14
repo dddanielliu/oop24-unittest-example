@@ -9,7 +9,7 @@ TEST(Calculator, Add) {
 
 TEST(Calculator, Add2) {
     Calculator C;
-    EXPECT_EQ(C.Add(1, 3), 5);
+    EXPECT_EQ(C.Add(2, 3), 5);
 }
 
 
