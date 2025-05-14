@@ -12,6 +12,16 @@ TEST(Calculator, Add2) {
     EXPECT_EQ(C.Add(2, 3), 5);
 }
 
+TEST(Calculator, Sub) {
+    Calculator C;
+    EXPECT_EQ(C.Sub(3, 1), 2);
+}
+
+TEST(Calculator, Multiply) {
+    Calculator C;
+    EXPECT_EQ(C.Multiply(2, 3), 6);
+}
+
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
